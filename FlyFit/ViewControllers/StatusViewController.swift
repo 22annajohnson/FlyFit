@@ -1,14 +1,13 @@
 //
-//  HomeViewController.swift
+//  StatusViewController.swift
 //  FlyFit
 //
-//  Created by Anna Johnson on 3/2/23.
+//  Created by Anna Johnson on 3/3/23.
 //
-
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class StatusViewController: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -19,14 +18,9 @@ class HomeViewController: UIViewController {
 
         view.backgroundColor = Style().primaryBackgroundColor
         
-        let header = AddElements().addHeader(title: "Summary")
+        let header = AddElements().addHeader(title: "Status")
         view.addSubview(header)
         
     }
-    
-
-
-
 
 }
-

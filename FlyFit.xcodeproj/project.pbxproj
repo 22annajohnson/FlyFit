@@ -14,6 +14,10 @@
 		5765DFA629B1291200AFFC4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5765DFA529B1291200AFFC4D /* Assets.xcassets */; };
 		5765DFA929B1291200AFFC4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5765DFA729B1291200AFFC4D /* LaunchScreen.storyboard */; };
 		5765DFB129B1299200AFFC4D /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DFB029B1299200AFFC4D /* MainTabBarViewController.swift */; };
+		5765DFB629B2769F00AFFC4D /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DFB529B2769F00AFFC4D /* Style.swift */; };
+		5765DFB829B27C1200AFFC4D /* Inter-VariableFont_slnt,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5765DFB729B27C1200AFFC4D /* Inter-VariableFont_slnt,wght.ttf */; };
+		5765DFBA29B284B600AFFC4D /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DFB929B284B600AFFC4D /* Elements.swift */; };
+		5765DFBC29B2910800AFFC4D /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DFBB29B2910800AFFC4D /* StatusViewController.swift */; };
 		A1220BA229B25F79006221E5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1220BA129B25F79006221E5 /* DataController.swift */; };
 		A1220BA729B27170006221E5 /* Sensor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1220BA529B27170006221E5 /* Sensor+CoreDataClass.swift */; };
 		A1220BA829B27170006221E5 /* Sensor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1220BA629B27170006221E5 /* Sensor+CoreDataProperties.swift */; };
@@ -29,6 +33,10 @@
 		5765DFA829B1291200AFFC4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5765DFAA29B1291200AFFC4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5765DFB029B1299200AFFC4D /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		5765DFB529B2769F00AFFC4D /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		5765DFB729B27C1200AFFC4D /* Inter-VariableFont_slnt,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-VariableFont_slnt,wght.ttf"; sourceTree = "<group>"; };
+		5765DFB929B284B600AFFC4D /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
+		5765DFBB29B2910800AFFC4D /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		A1220BA129B25F79006221E5 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		A1220BA529B27170006221E5 /* Sensor+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensor+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A1220BA629B27170006221E5 /* Sensor+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensor+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -64,6 +72,7 @@
 		5765DF9829B1291100AFFC4D /* FlyFit */ = {
 			isa = PBXGroup;
 			children = (
+				5765DFB429B2766300AFFC4D /* StyleGuide */,
 				A1220BA929B27402006221E5 /* CoreData */,
 				5765DFB229B12A6D00AFFC4D /* ViewControllers */,
 				5765DF9929B1291100AFFC4D /* AppDelegate.swift */,
@@ -81,8 +90,19 @@
 			children = (
 				5765DFB029B1299200AFFC4D /* MainTabBarViewController.swift */,
 				5765DF9D29B1291100AFFC4D /* HomeViewController.swift */,
+				5765DFBB29B2910800AFFC4D /* StatusViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5765DFB429B2766300AFFC4D /* StyleGuide */ = {
+			isa = PBXGroup;
+			children = (
+				5765DFB929B284B600AFFC4D /* Elements.swift */,
+				5765DFB529B2769F00AFFC4D /* Style.swift */,
+				5765DFB729B27C1200AFFC4D /* Inter-VariableFont_slnt,wght.ttf */,
+			);
+			path = StyleGuide;
 			sourceTree = "<group>";
 		};
 		A1220BA929B27402006221E5 /* CoreData */ = {
@@ -154,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5765DFA929B1291200AFFC4D /* LaunchScreen.storyboard in Resources */,
+				5765DFB829B27C1200AFFC4D /* Inter-VariableFont_slnt,wght.ttf in Resources */,
 				5765DFA629B1291200AFFC4D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,9 +190,12 @@
 				A1220BA729B27170006221E5 /* Sensor+CoreDataClass.swift in Sources */,
 				5765DF9E29B1291100AFFC4D /* HomeViewController.swift in Sources */,
 				5765DFA429B1291100AFFC4D /* FlyFit.xcdatamodeld in Sources */,
+				5765DFBA29B284B600AFFC4D /* Elements.swift in Sources */,
 				5765DF9A29B1291100AFFC4D /* AppDelegate.swift in Sources */,
 				A1220BA229B25F79006221E5 /* DataController.swift in Sources */,
 				A1220BA829B27170006221E5 /* Sensor+CoreDataProperties.swift in Sources */,
+				5765DFB629B2769F00AFFC4D /* Style.swift in Sources */,
+				5765DFBC29B2910800AFFC4D /* StatusViewController.swift in Sources */,
 				5765DF9C29B1291100AFFC4D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

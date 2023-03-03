@@ -14,10 +14,10 @@ class MainTabBarViewController: UITabBarController {
         view.backgroundColor = .systemBackground
         
         let vc1 = UINavigationController(rootViewController: HomeViewController())
-        
+        let vc2 = UINavigationController(rootViewController: StatusViewController())
+
         vc1.tabBarItem.image = UIImage(systemName: "house")
-        vc1.title = "Hanger"
-        
+        vc2.tabBarItem.image = UIImage(systemName: "stethoscope")
         
         
         tabBar.tintColor = UIColor(red: 0/255, green: 85/255, blue: 187/255, alpha: 1)
@@ -25,7 +25,7 @@ class MainTabBarViewController: UITabBarController {
         tabBar.barTintColor = UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1)
 
         
-        setViewControllers([vc1], animated: true)
+        setViewControllers([vc1, vc2], animated: true)
         // Do any additional setup after loading the view.
     }
     
