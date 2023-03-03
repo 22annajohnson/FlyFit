@@ -14,6 +14,9 @@
 		5765DFA629B1291200AFFC4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5765DFA529B1291200AFFC4D /* Assets.xcassets */; };
 		5765DFA929B1291200AFFC4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5765DFA729B1291200AFFC4D /* LaunchScreen.storyboard */; };
 		5765DFB129B1299200AFFC4D /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DFB029B1299200AFFC4D /* MainTabBarViewController.swift */; };
+		A1220BA229B25F79006221E5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1220BA129B25F79006221E5 /* DataController.swift */; };
+		A1220BA729B27170006221E5 /* Sensor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1220BA529B27170006221E5 /* Sensor+CoreDataClass.swift */; };
+		A1220BA829B27170006221E5 /* Sensor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1220BA629B27170006221E5 /* Sensor+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		5765DFA829B1291200AFFC4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5765DFAA29B1291200AFFC4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5765DFB029B1299200AFFC4D /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		A1220BA129B25F79006221E5 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		A1220BA529B27170006221E5 /* Sensor+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensor+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A1220BA629B27170006221E5 /* Sensor+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensor+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		5765DF9829B1291100AFFC4D /* FlyFit */ = {
 			isa = PBXGroup;
 			children = (
+				A1220BA929B27402006221E5 /* CoreData */,
 				5765DFB229B12A6D00AFFC4D /* ViewControllers */,
 				5765DF9929B1291100AFFC4D /* AppDelegate.swift */,
 				5765DF9B29B1291100AFFC4D /* SceneDelegate.swift */,
@@ -76,6 +83,16 @@
 				5765DF9D29B1291100AFFC4D /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A1220BA929B27402006221E5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A1220BA529B27170006221E5 /* Sensor+CoreDataClass.swift */,
+				A1220BA629B27170006221E5 /* Sensor+CoreDataProperties.swift */,
+				A1220BA129B25F79006221E5 /* DataController.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +166,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5765DFB129B1299200AFFC4D /* MainTabBarViewController.swift in Sources */,
+				A1220BA729B27170006221E5 /* Sensor+CoreDataClass.swift in Sources */,
 				5765DF9E29B1291100AFFC4D /* HomeViewController.swift in Sources */,
 				5765DFA429B1291100AFFC4D /* FlyFit.xcdatamodeld in Sources */,
 				5765DF9A29B1291100AFFC4D /* AppDelegate.swift in Sources */,
+				A1220BA229B25F79006221E5 /* DataController.swift in Sources */,
+				A1220BA829B27170006221E5 /* Sensor+CoreDataProperties.swift in Sources */,
 				5765DF9C29B1291100AFFC4D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +311,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QTSJFA7Y7P;
+				DEVELOPMENT_TEAM = 4C7H6LPRHA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlyFit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -303,7 +323,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.AnnaJohnson.FlyFit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JakeLoranger.FlyFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -318,7 +338,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QTSJFA7Y7P;
+				DEVELOPMENT_TEAM = 4C7H6LPRHA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlyFit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -330,7 +350,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.AnnaJohnson.FlyFit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JakeLoranger.FlyFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
