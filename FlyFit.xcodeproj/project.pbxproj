@@ -18,10 +18,38 @@
 		5765DFB829B27C1200AFFC4D /* Inter-VariableFont_slnt,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5765DFB729B27C1200AFFC4D /* Inter-VariableFont_slnt,wght.ttf */; };
 		5765DFBA29B284B600AFFC4D /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DFB929B284B600AFFC4D /* Elements.swift */; };
 		5765DFBC29B2910800AFFC4D /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DFBB29B2910800AFFC4D /* StatusViewController.swift */; };
+		57C047F629B7C47000E1566B /* MapboxCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047F529B7C47000E1566B /* MapboxCommon.xcframework */; };
+		57C047F729B7C47000E1566B /* MapboxCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047F529B7C47000E1566B /* MapboxCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57C047FA29B7C48200E1566B /* MapboxCoreMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047F929B7C48200E1566B /* MapboxCoreMaps.xcframework */; };
+		57C047FB29B7C48200E1566B /* MapboxCoreMaps.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047F929B7C48200E1566B /* MapboxCoreMaps.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57C047FD29B7C48B00E1566B /* MapboxMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047FC29B7C48B00E1566B /* MapboxMaps.xcframework */; };
+		57C047FE29B7C48B00E1566B /* MapboxMaps.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047FC29B7C48B00E1566B /* MapboxMaps.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57C0480029B7C49800E1566B /* MapboxMobileEvents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047FF29B7C49800E1566B /* MapboxMobileEvents.xcframework */; };
+		57C0480129B7C49800E1566B /* MapboxMobileEvents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047FF29B7C49800E1566B /* MapboxMobileEvents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57C0480329B7C4A100E1566B /* Turf.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C0480229B7C4A100E1566B /* Turf.xcframework */; };
+		57C0480429B7C4A100E1566B /* Turf.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C0480229B7C4A100E1566B /* Turf.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A1220BA229B25F79006221E5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1220BA129B25F79006221E5 /* DataController.swift */; };
 		A1220BA729B27170006221E5 /* Sensor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1220BA529B27170006221E5 /* Sensor+CoreDataClass.swift */; };
 		A1220BA829B27170006221E5 /* Sensor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1220BA629B27170006221E5 /* Sensor+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		57C047F829B7C47000E1566B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				57C047FB29B7C48200E1566B /* MapboxCoreMaps.xcframework in Embed Frameworks */,
+				57C0480129B7C49800E1566B /* MapboxMobileEvents.xcframework in Embed Frameworks */,
+				57C047F729B7C47000E1566B /* MapboxCommon.xcframework in Embed Frameworks */,
+				57C0480429B7C4A100E1566B /* Turf.xcframework in Embed Frameworks */,
+				57C047FE29B7C48B00E1566B /* MapboxMaps.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5765DF9629B1291100AFFC4D /* FlyFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +65,11 @@
 		5765DFB729B27C1200AFFC4D /* Inter-VariableFont_slnt,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-VariableFont_slnt,wght.ttf"; sourceTree = "<group>"; };
 		5765DFB929B284B600AFFC4D /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
 		5765DFBB29B2910800AFFC4D /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		57C047F529B7C47000E1566B /* MapboxCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MapboxCommon.xcframework; path = artifacts/MapboxCommon.xcframework; sourceTree = "<group>"; };
+		57C047F929B7C48200E1566B /* MapboxCoreMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MapboxCoreMaps.xcframework; path = artifacts/MapboxCoreMaps.xcframework; sourceTree = "<group>"; };
+		57C047FC29B7C48B00E1566B /* MapboxMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MapboxMaps.xcframework; path = artifacts/MapboxMaps.xcframework; sourceTree = "<group>"; };
+		57C047FF29B7C49800E1566B /* MapboxMobileEvents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MapboxMobileEvents.xcframework; path = artifacts/MapboxMobileEvents.xcframework; sourceTree = "<group>"; };
+		57C0480229B7C4A100E1566B /* Turf.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Turf.xcframework; path = artifacts/Turf.xcframework; sourceTree = "<group>"; };
 		A1220BA129B25F79006221E5 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		A1220BA529B27170006221E5 /* Sensor+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensor+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A1220BA629B27170006221E5 /* Sensor+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensor+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -47,6 +80,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57C047FA29B7C48200E1566B /* MapboxCoreMaps.xcframework in Frameworks */,
+				57C0480029B7C49800E1566B /* MapboxMobileEvents.xcframework in Frameworks */,
+				57C047F629B7C47000E1566B /* MapboxCommon.xcframework in Frameworks */,
+				57C0480329B7C4A100E1566B /* Turf.xcframework in Frameworks */,
+				57C047FD29B7C48B00E1566B /* MapboxMaps.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +96,7 @@
 			children = (
 				5765DF9829B1291100AFFC4D /* FlyFit */,
 				5765DF9729B1291100AFFC4D /* Products */,
+				57C047F429B7C47000E1566B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +144,18 @@
 			path = StyleGuide;
 			sourceTree = "<group>";
 		};
+		57C047F429B7C47000E1566B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57C0480229B7C4A100E1566B /* Turf.xcframework */,
+				57C047FF29B7C49800E1566B /* MapboxMobileEvents.xcframework */,
+				57C047FC29B7C48B00E1566B /* MapboxMaps.xcframework */,
+				57C047F929B7C48200E1566B /* MapboxCoreMaps.xcframework */,
+				57C047F529B7C47000E1566B /* MapboxCommon.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A1220BA929B27402006221E5 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +176,7 @@
 				5765DF9229B1291100AFFC4D /* Sources */,
 				5765DF9329B1291100AFFC4D /* Frameworks */,
 				5765DF9429B1291100AFFC4D /* Resources */,
+				57C047F829B7C47000E1566B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +211,8 @@
 				Base,
 			);
 			mainGroup = 5765DF8D29B1291000AFFC4D;
+			packageReferences = (
+			);
 			productRefGroup = 5765DF9729B1291100AFFC4D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -335,7 +389,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4C7H6LPRHA;
+				DEVELOPMENT_TEAM = QTSJFA7Y7P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlyFit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -347,7 +401,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.JakeLoranger.FlyFit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnnaJohnson.FlyFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -362,7 +416,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4C7H6LPRHA;
+				DEVELOPMENT_TEAM = QTSJFA7Y7P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlyFit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -374,7 +428,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.JakeLoranger.FlyFit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnnaJohnson.FlyFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

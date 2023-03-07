@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import MapboxMaps
 
 class AddElements: ObservableObject {
     
@@ -40,5 +41,39 @@ class AddElements: ObservableObject {
         header.addSubview(accountView)
         
         return header
+    }
+    
+    func addMap(frame: CGRect) -> UIView {
+        let view = UIView(frame: frame)
+        let token: String = "sk.eyJ1IjoiYW5uYWpvaG5zb24yMiIsImEiOiJjbGV5bmE3d2YwbHB2M3NwNWl5dm0wMnIxIn0.k9ZlCSeJpjZ4EpqnMb7GSQ"
+        
+        let resourceOptions = ResourceOptions(accessToken: token)
+        let mapInitOptions = MapInitOptions(resourceOptions: resourceOptions, styleURI: Style().mapBoxStyle)
+        let map = MapView(frame: view.bounds, mapInitOptions: mapInitOptions)
+        map.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        view.addSubview(map)
+        let corner = AddElements().addCorner(frame: view.bounds)
+        view.addSubview(corner)
+        return view
+    }
+    
+    func addCorner(frame: CGRect) -> UIView {
+        let view = UIView(frame: frame)
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.frame = view.bounds
+        shapeLayer.lineWidth = 1.0
+        shapeLayer.fillColor = Style().secondaryBackgroundColor.cgColor
+        view.layer.addSublayer(shapeLayer)
+        let path = UIBezierPath()
+
+        path.move(to: CGPoint(x: 0, y: 25))
+        path.addQuadCurve(to: CGPoint(x: 25, y: 0), controlPoint: CGPoint(x: 0, y: 0))
+        path.addLine(to: CGPoint(x: 0, y: -1))
+        path.addLine(to: CGPoint(x: 0, y: 25))
+        path.close()
+        shapeLayer.path = path.cgPath
+
+        return view
     }
 }

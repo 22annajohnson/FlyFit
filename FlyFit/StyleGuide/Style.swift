@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import MapboxMaps
 
 struct Style {
     var primaryBackgroundColor = UIColor(red: 29/255, green: 38/255, blue: 37/255, alpha: 1)
@@ -22,4 +23,16 @@ struct Style {
     var subheadingFont = UIFont(name: "Inter-Regular_SemiBold", size: 20)
     var alertFont = UIFont(name: "Inter-Regular_Bold", size: 20)
     var textFont = UIFont(name: "Inter-Regular_SemiBold", size: 16)
+    
+    var mapBoxStyle = StyleURI(rawValue: "mapbox://styles/annajohnson22/clevrxn09004r01n38xg7vten")
 }
+
+
+//for family in UIFont.familyNames {
+//  let sName: String = family as String
+//  print("family: \(sName)")
+//
+//    for name in UIFont.fontNames(forFamilyName: sName) {
+//    print("name: \(name as String)")
+//  }
+//}
