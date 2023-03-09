@@ -53,13 +53,13 @@ class AddElements: ObservableObject {
         map.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         view.addSubview(map)
-        let corner = AddElements().addCorner(frame: view.bounds)
+        let corner = AddElements().addCorner()
         view.addSubview(corner)
         return view
     }
     
-    func addCorner(frame: CGRect) -> UIView {
-        let view = UIView(frame: frame)
+    func addCorner() -> UIView {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
         let shapeLayer = CAShapeLayer()
         shapeLayer.frame = view.bounds
         shapeLayer.lineWidth = 1.0

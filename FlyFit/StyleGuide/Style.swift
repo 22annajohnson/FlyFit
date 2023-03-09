@@ -21,6 +21,7 @@ struct Style {
     
     var headingFont = UIFont(name: "Inter-Regular_Bold", size: 28)
     var subheadingFont = UIFont(name: "Inter-Regular_SemiBold", size: 20)
+    var buttonFont = UIFont(name: "Inter-Regular_SemiBold", size: 24)
     var alertFont = UIFont(name: "Inter-Regular_Bold", size: 20)
     var textFont = UIFont(name: "Inter-Regular_SemiBold", size: 16)
     

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5740A08229BA52F50036F01E /* FastStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5740A08129BA52F50036F01E /* FastStatsView.swift */; };
+		5740A08429BA5C7D0036F01E /* FlightLogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5740A08329BA5C7D0036F01E /* FlightLogsViewController.swift */; };
+		5740A08629BA5C9D0036F01E /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5740A08529BA5C9D0036F01E /* NavigationViewController.swift */; };
 		5765DF9A29B1291100AFFC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DF9929B1291100AFFC4D /* AppDelegate.swift */; };
 		5765DF9C29B1291100AFFC4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DF9B29B1291100AFFC4D /* SceneDelegate.swift */; };
 		5765DF9E29B1291100AFFC4D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DF9D29B1291100AFFC4D /* HomeViewController.swift */; };
@@ -52,6 +55,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5740A08129BA52F50036F01E /* FastStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastStatsView.swift; sourceTree = "<group>"; };
+		5740A08329BA5C7D0036F01E /* FlightLogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightLogsViewController.swift; sourceTree = "<group>"; };
+		5740A08529BA5C9D0036F01E /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		5765DF9629B1291100AFFC4D /* FlyFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5765DF9929B1291100AFFC4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5765DF9B29B1291100AFFC4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5740A08029BA52D60036F01E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5740A08129BA52F50036F01E /* FastStatsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5765DF8D29B1291000AFFC4D = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +125,7 @@
 		5765DF9829B1291100AFFC4D /* FlyFit */ = {
 			isa = PBXGroup;
 			children = (
+				5740A08029BA52D60036F01E /* Views */,
 				5765DFB429B2766300AFFC4D /* StyleGuide */,
 				A1220BA929B27402006221E5 /* CoreData */,
 				5765DFB229B12A6D00AFFC4D /* ViewControllers */,
@@ -130,6 +145,8 @@
 				5765DFB029B1299200AFFC4D /* MainTabBarViewController.swift */,
 				5765DF9D29B1291100AFFC4D /* HomeViewController.swift */,
 				5765DFBB29B2910800AFFC4D /* StatusViewController.swift */,
+				5740A08329BA5C7D0036F01E /* FlightLogsViewController.swift */,
+				5740A08529BA5C9D0036F01E /* NavigationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -247,9 +264,12 @@
 				5765DFBA29B284B600AFFC4D /* Elements.swift in Sources */,
 				5765DF9A29B1291100AFFC4D /* AppDelegate.swift in Sources */,
 				A1220BA229B25F79006221E5 /* DataController.swift in Sources */,
+				5740A08229BA52F50036F01E /* FastStatsView.swift in Sources */,
 				A1220BA829B27170006221E5 /* Sensor+CoreDataProperties.swift in Sources */,
 				5765DFB629B2769F00AFFC4D /* Style.swift in Sources */,
 				5765DFBC29B2910800AFFC4D /* StatusViewController.swift in Sources */,
+				5740A08429BA5C7D0036F01E /* FlightLogsViewController.swift in Sources */,
+				5740A08629BA5C9D0036F01E /* NavigationViewController.swift in Sources */,
 				5765DF9C29B1291100AFFC4D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
