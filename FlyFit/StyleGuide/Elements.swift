@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import MapboxMaps
+import BetterSegmentedControl
 
 class AddElements: ObservableObject {
     
@@ -74,6 +75,22 @@ class AddElements: ObservableObject {
         path.close()
         shapeLayer.path = path.cgPath
 
+        return view
+    }
+    
+    func addSlider(frame: CGRect) -> UIView{
+        let view = UIView(frame: frame)
+        let slider = BetterSegmentedControl.appleStyled(frame: view.bounds, titles: ["Vitals", "Environmental"])
+        
+        slider.segments = LabelSegment.segments(withTitles: ["Vitals", "Environmental"],
+                                                normalFont: Style().textFont, normalTextColor: Style().primaryTextColor,
+                                                selectedFont: Style().textFont,
+                                                selectedTextColor: Style().primaryTextColor)
+        slider.backgroundColor = Style().secondaryOpacityColor
+        slider.indicatorViewBackgroundColor = Style().sliderColor
+      
+        
+        view.addSubview(slider)
         return view
     }
 }

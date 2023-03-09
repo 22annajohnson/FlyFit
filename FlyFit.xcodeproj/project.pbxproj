@@ -10,6 +10,7 @@
 		5740A08229BA52F50036F01E /* FastStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5740A08129BA52F50036F01E /* FastStatsView.swift */; };
 		5740A08429BA5C7D0036F01E /* FlightLogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5740A08329BA5C7D0036F01E /* FlightLogsViewController.swift */; };
 		5740A08629BA5C9D0036F01E /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5740A08529BA5C9D0036F01E /* NavigationViewController.swift */; };
+		5740A08929BA74A20036F01E /* BetterSegmentedControl in Frameworks */ = {isa = PBXBuildFile; productRef = 5740A08829BA74A20036F01E /* BetterSegmentedControl */; };
 		5765DF9A29B1291100AFFC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DF9929B1291100AFFC4D /* AppDelegate.swift */; };
 		5765DF9C29B1291100AFFC4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DF9B29B1291100AFFC4D /* SceneDelegate.swift */; };
 		5765DF9E29B1291100AFFC4D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DF9D29B1291100AFFC4D /* HomeViewController.swift */; };
@@ -91,6 +92,7 @@
 				57C047F629B7C47000E1566B /* MapboxCommon.xcframework in Frameworks */,
 				57C0480329B7C4A100E1566B /* Turf.xcframework in Frameworks */,
 				57C047FD29B7C48B00E1566B /* MapboxMaps.xcframework in Frameworks */,
+				5740A08929BA74A20036F01E /* BetterSegmentedControl in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +202,9 @@
 			dependencies = (
 			);
 			name = FlyFit;
+			packageProductDependencies = (
+				5740A08829BA74A20036F01E /* BetterSegmentedControl */,
+			);
 			productName = FlyFit;
 			productReference = 5765DF9629B1291100AFFC4D /* FlyFit.app */;
 			productType = "com.apple.product-type.application";
@@ -229,6 +234,7 @@
 			);
 			mainGroup = 5765DF8D29B1291000AFFC4D;
 			packageReferences = (
+				5740A08729BA74A20036F01E /* XCRemoteSwiftPackageReference "BetterSegmentedControl" */,
 			);
 			productRefGroup = 5765DF9729B1291100AFFC4D /* Products */;
 			projectDirPath = "";
@@ -478,6 +484,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5740A08729BA74A20036F01E /* XCRemoteSwiftPackageReference "BetterSegmentedControl" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gmarm/BetterSegmentedControl";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5740A08829BA74A20036F01E /* BetterSegmentedControl */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5740A08729BA74A20036F01E /* XCRemoteSwiftPackageReference "BetterSegmentedControl" */;
+			productName = BetterSegmentedControl;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		5765DFA229B1291100AFFC4D /* FlyFit.xcdatamodeld */ = {
