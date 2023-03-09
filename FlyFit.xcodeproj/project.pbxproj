@@ -34,6 +34,8 @@
 		A1220BA229B25F79006221E5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1220BA129B25F79006221E5 /* DataController.swift */; };
 		A1220BA729B27170006221E5 /* Sensor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1220BA529B27170006221E5 /* Sensor+CoreDataClass.swift */; };
 		A1220BA829B27170006221E5 /* Sensor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1220BA629B27170006221E5 /* Sensor+CoreDataProperties.swift */; };
+		A14A4F1829BA6E7D003E3F7B /* CBUUIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A4F1729BA6E7D003E3F7B /* CBUUIDs.swift */; };
+		A14A4F1A29BA6F6C003E3F7B /* BLEController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A4F1929BA6F6C003E3F7B /* BLEController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,6 +81,8 @@
 		A1220BA129B25F79006221E5 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		A1220BA529B27170006221E5 /* Sensor+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensor+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A1220BA629B27170006221E5 /* Sensor+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A14A4F1729BA6E7D003E3F7B /* CBUUIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBUUIDs.swift; sourceTree = "<group>"; };
+		A14A4F1929BA6F6C003E3F7B /* BLEController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 		5765DF9829B1291100AFFC4D /* FlyFit */ = {
 			isa = PBXGroup;
 			children = (
+				A14A4F1629BA6E67003E3F7B /* BLE */,
 				5740A08029BA52D60036F01E /* Views */,
 				5765DFB429B2766300AFFC4D /* StyleGuide */,
 				A1220BA929B27402006221E5 /* CoreData */,
@@ -181,6 +186,15 @@
 				A1220BA129B25F79006221E5 /* DataController.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		A14A4F1629BA6E67003E3F7B /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				A14A4F1729BA6E7D003E3F7B /* CBUUIDs.swift */,
+				A14A4F1929BA6F6C003E3F7B /* BLEController.swift */,
+			);
+			path = BLE;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +273,10 @@
 			files = (
 				5765DFB129B1299200AFFC4D /* MainTabBarViewController.swift in Sources */,
 				A1220BA729B27170006221E5 /* Sensor+CoreDataClass.swift in Sources */,
+				A14A4F1829BA6E7D003E3F7B /* CBUUIDs.swift in Sources */,
 				5765DF9E29B1291100AFFC4D /* HomeViewController.swift in Sources */,
 				5765DFA429B1291100AFFC4D /* FlyFit.xcdatamodeld in Sources */,
+				A14A4F1A29BA6F6C003E3F7B /* BLEController.swift in Sources */,
 				5765DFBA29B284B600AFFC4D /* Elements.swift in Sources */,
 				5765DF9A29B1291100AFFC4D /* AppDelegate.swift in Sources */,
 				A1220BA229B25F79006221E5 /* DataController.swift in Sources */,
@@ -409,9 +425,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QTSJFA7Y7P;
+				DEVELOPMENT_TEAM = 4C7H6LPRHA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlyFit/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses bluetooth to connect and read the sensor system";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -421,7 +438,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.AnnaJohnson.FlyFit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JakeLoranger.FlyFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -436,9 +453,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QTSJFA7Y7P;
+				DEVELOPMENT_TEAM = 4C7H6LPRHA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlyFit/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses bluetooth to connect and read the sensor system";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -448,7 +466,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.AnnaJohnson.FlyFit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JakeLoranger.FlyFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -8,9 +8,12 @@
 
 import UIKit
 import MapboxMaps
+import CoreBluetooth
 
 class HomeViewController: UIViewController {
     internal var mapView: UIView!
+    let BLE = BLEController()
+    var statusLabel: UILabel!
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -27,6 +30,15 @@ class HomeViewController: UIViewController {
         view.addSubview(mapView)
         
         view.addSubview(FastStatsView().startFlightView(frame: CGRect(x: 0, y: view.bounds.height*0.777, width: view.bounds.width, height: view.bounds.height*0.14)))
+    }
+    
+    @objc func startFlight() {
+        print("Button Pressed")
+        BLE.tx = CBUUIDs.tx
+        BLE.rx = CBUUIDs.rx
+        BLE.statusLabel = statusLabel
+        BLE.service = CBUUIDs.service
+        BLE.setup()
     }
 }
 
