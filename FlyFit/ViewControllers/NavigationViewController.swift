@@ -21,6 +21,9 @@ class NavigationViewController: UIViewController {
         let header = AddElements().addHeader(title: "Navigation")
         view.addSubview(header)
         
+        let mapView = AddElements().addMap(frame: view.bounds)
+        view.addSubview(mapView)
+        
     }
 
 }
