@@ -36,6 +36,7 @@
 		A1220BA829B27170006221E5 /* Sensor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1220BA629B27170006221E5 /* Sensor+CoreDataProperties.swift */; };
 		A14A4F1829BA6E7D003E3F7B /* CBUUIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A4F1729BA6E7D003E3F7B /* CBUUIDs.swift */; };
 		A14A4F1A29BA6F6C003E3F7B /* BLEController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A4F1929BA6F6C003E3F7B /* BLEController.swift */; };
+		A14A4F1C29BAB536003E3F7B /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A4F1B29BAB536003E3F7B /* ChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,6 +84,7 @@
 		A1220BA629B27170006221E5 /* Sensor+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensor+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A14A4F1729BA6E7D003E3F7B /* CBUUIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBUUIDs.swift; sourceTree = "<group>"; };
 		A14A4F1929BA6F6C003E3F7B /* BLEController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEController.swift; sourceTree = "<group>"; };
+		A14A4F1B29BAB536003E3F7B /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		5765DF9829B1291100AFFC4D /* FlyFit */ = {
 			isa = PBXGroup;
 			children = (
+				A14A4F1D29BBA0F2003E3F7B /* SwiftUIViews */,
 				A14A4F1629BA6E67003E3F7B /* BLE */,
 				5740A08029BA52D60036F01E /* Views */,
 				5765DFB429B2766300AFFC4D /* StyleGuide */,
@@ -195,6 +198,14 @@
 				A14A4F1929BA6F6C003E3F7B /* BLEController.swift */,
 			);
 			path = BLE;
+			sourceTree = "<group>";
+		};
+		A14A4F1D29BBA0F2003E3F7B /* SwiftUIViews */ = {
+			isa = PBXGroup;
+			children = (
+				A14A4F1B29BAB536003E3F7B /* ChartView.swift */,
+			);
+			path = SwiftUIViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +296,7 @@
 				5765DFB629B2769F00AFFC4D /* Style.swift in Sources */,
 				5765DFBC29B2910800AFFC4D /* StatusViewController.swift in Sources */,
 				5740A08429BA5C7D0036F01E /* FlightLogsViewController.swift in Sources */,
+				A14A4F1C29BAB536003E3F7B /* ChartView.swift in Sources */,
 				5740A08629BA5C9D0036F01E /* NavigationViewController.swift in Sources */,
 				5765DF9C29B1291100AFFC4D /* SceneDelegate.swift in Sources */,
 			);

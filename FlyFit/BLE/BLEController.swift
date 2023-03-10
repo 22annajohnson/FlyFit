@@ -165,6 +165,7 @@ class BLEController: NSObject, ObservableObject, CBCentralManagerDelegate, CBPer
         // Setting the notify and read values to the rx characteristic
                 peripheral.setNotifyValue(true, for: txCharacteristic!)
                 peripheral.readValue(for: characteristic)
+                
 
                 print("TX Characteristic: \(txCharacteristic.uuid)")
             }
@@ -179,6 +180,25 @@ class BLEController: NSObject, ObservableObject, CBCentralManagerDelegate, CBPer
                 print("RX Characteristic: \(rxCharacteristic.uuid)")
             }
         }
+    }
+    
+    func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
+        
+        var characteristicASCIIValue = NSString()
+        guard characteristic == txCharacteristic,
+        let characteristicValue = characteristic.value,
+        let ASCIIstring = NSString(data: characteristicValue, encoding: String.Encoding.utf8.rawValue) else { return }
+        characteristicASCIIValue = ASCIIstring
+    
+        
+        // Specific to testing microcontroller code
+        let tempString = String(characteristicASCIIValue).split(separator: ",")[0]
+        var tempPoint = (tempString as NSString).integerValue
+        var tempTime = NSDate()
+        print(tempPoint)
+        
+        // Save data to CoreData
+        
     }
     
 }
