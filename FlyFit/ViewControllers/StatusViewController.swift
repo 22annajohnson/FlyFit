@@ -28,6 +28,7 @@ class StatusViewController: UIViewController {
         let slider = AddElements().addSlider(frame: CGRect(x: view.bounds.width*0.0923, y: view.bounds.height*0.1505, width: view.bounds.width*0.8154, height: view.bounds.height*0.0403))
         
         view.addSubview(header)
+
         view.addSubview(background)
         view.addSubview(slider)
         
@@ -75,6 +76,7 @@ extension StatusViewController: UITableViewDelegate, UITableViewDataSource {
         
         let metric = metrics[indexPath.section]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MetricsTableViewCell
+
         
         cell.setup(metrics: metric)
         cell.backgroundColor = Style().secondaryBackgroundColor
