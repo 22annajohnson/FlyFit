@@ -1,6 +1,0 @@
-framework module MapboxCoreMaps_Private {
-  umbrella header "MapboxCoreMaps_Internal.h"
-
-  export *
-  module * { export * }
-}
