@@ -120,8 +120,6 @@ extension StatusViewController {
             let metric3 = Metric(sensorType: MetricTypes.Smoke, indicator: "healthy")
             return [metric1, metric2, metric3]
         }
-        
-
         return []
     }
 }
