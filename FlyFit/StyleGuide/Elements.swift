@@ -44,6 +44,14 @@ class AddElements: ObservableObject {
         return header
     }
     
+    func addBackground() -> UIView {
+        let background = UIView(frame: CGRect(x: 0, y: UIScreen.main.bounds.height*0.1256, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height*0.7855))
+        background.backgroundColor = Style().primaryBackgroundColor
+        background.layer.cornerRadius =  25
+        background.layer.maskedCorners = [.layerMinXMinYCorner]
+        return background
+    }
+    
     func addMap(frame: CGRect) -> UIView {
         let view = UIView(frame: frame)
         let token: String = "sk.eyJ1IjoiYW5uYWpvaG5zb24yMiIsImEiOiJjbGV5bmE3d2YwbHB2M3NwNWl5dm0wMnIxIn0.k9ZlCSeJpjZ4EpqnMb7GSQ"
@@ -88,6 +96,8 @@ class AddElements: ObservableObject {
                                                 selectedTextColor: Style().primaryTextColor)
         slider.backgroundColor = Style().secondaryOpacityColor
         slider.indicatorViewBackgroundColor = Style().sliderColor
+        slider.addTarget(self, action: #selector(StatusViewController.changeDataSet(_:)),
+                         for: .valueChanged)
       
         
         view.addSubview(slider)

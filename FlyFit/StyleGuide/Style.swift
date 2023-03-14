@@ -17,8 +17,8 @@ struct Style {
     var accountBackgroundColor = UIColor(red: 146/255, green: 154/255, blue: 162/255, alpha: 1)
     var urgentColor = UIColor(red: 196/255, green: 30/255, blue: 30/255, alpha: 1)
     var warningColor = UIColor(red: 195/255, green: 80/255, blue: 30/255, alpha: 1)
+    var healthyColor = UIColor(red: 88/255, green: 149/255, blue: 87/255, alpha: 1)
     var accentColor = UIColor(red: 80/255, green: 149/255, blue: 158/255, alpha: 1)
-    var healthyColor = UIColor(red: 94/255, green: 160/255, blue: 131/255, alpha: 1)
     var sliderColor = UIColor(red: 185/255, green: 176/255, blue: 178/255, alpha: 0.4)
     
     var headingFont = UIFont(name: "Inter-Regular_Bold", size: 28)
