@@ -17,12 +17,14 @@ class MainTabBarViewController: UITabBarController {
         let vc2 = UINavigationController(rootViewController: StatusViewController())
         let vc3 = UINavigationController(rootViewController: FlightLogsViewController())
         let vc4 = UINavigationController(rootViewController: NavigationViewController())
+        let vc5 = UINavigationController(rootViewController: TestingViewController())
 
 
         vc1.tabBarItem.image = UIImage(systemName: "house.fill")
         vc2.tabBarItem.image = UIImage(systemName: "stethoscope")
         vc3.tabBarItem.image = UIImage(systemName: "airplane")
         vc4.tabBarItem.image = UIImage(systemName: "map.fill")
+        vc5.tabBarItem.image = UIImage(systemName: "map")
         
         
         tabBar.tintColor = Style().primaryTextColor
@@ -30,7 +32,7 @@ class MainTabBarViewController: UITabBarController {
         tabBar.barTintColor = Style().primaryTextColor
 
         
-        setViewControllers([vc1, vc2, vc3, vc4], animated: true)
+        setViewControllers([vc1, vc2, vc3, vc4, vc5], animated: true)
         
         
         

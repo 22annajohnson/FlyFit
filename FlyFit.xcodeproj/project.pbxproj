@@ -37,6 +37,7 @@
 		A14A4F1829BA6E7D003E3F7B /* CBUUIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A4F1729BA6E7D003E3F7B /* CBUUIDs.swift */; };
 		A14A4F1A29BA6F6C003E3F7B /* BLEController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A4F1929BA6F6C003E3F7B /* BLEController.swift */; };
 		A14A4F1C29BAB536003E3F7B /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A4F1B29BAB536003E3F7B /* ChartView.swift */; };
+		A16B6B6529CA1DD400BF9C2C /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B6B6429CA1DD400BF9C2C /* TestingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -85,6 +86,7 @@
 		A14A4F1729BA6E7D003E3F7B /* CBUUIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBUUIDs.swift; sourceTree = "<group>"; };
 		A14A4F1929BA6F6C003E3F7B /* BLEController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEController.swift; sourceTree = "<group>"; };
 		A14A4F1B29BAB536003E3F7B /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		A16B6B6429CA1DD400BF9C2C /* TestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				5765DFB029B1299200AFFC4D /* MainTabBarViewController.swift */,
+				A16B6B6429CA1DD400BF9C2C /* TestingViewController.swift */,
 				5765DF9D29B1291100AFFC4D /* HomeViewController.swift */,
 				5765DFBB29B2910800AFFC4D /* StatusViewController.swift */,
 				5740A08329BA5C7D0036F01E /* FlightLogsViewController.swift */,
@@ -285,6 +288,7 @@
 				5765DFB129B1299200AFFC4D /* MainTabBarViewController.swift in Sources */,
 				A1220BA729B27170006221E5 /* Sensor+CoreDataClass.swift in Sources */,
 				A14A4F1829BA6E7D003E3F7B /* CBUUIDs.swift in Sources */,
+				A16B6B6529CA1DD400BF9C2C /* TestingViewController.swift in Sources */,
 				5765DF9E29B1291100AFFC4D /* HomeViewController.swift in Sources */,
 				5765DFA429B1291100AFFC4D /* FlyFit.xcdatamodeld in Sources */,
 				A14A4F1A29BA6F6C003E3F7B /* BLEController.swift in Sources */,
