@@ -195,15 +195,14 @@ class BLEController: NSObject, ObservableObject, CBCentralManagerDelegate, CBPer
         let rawData = String(characteristicASCIIValue).split(separator: ",")[0]
         var convertedData = (rawData as NSString).integerValue
 //        var tempTime = NSDate()
-        print(convertedData)
+//        print(convertedData)
         
         
         // Save data to CoreData
         let database = DataController()
         guard let dataPoint = database.add(_type: Sensor.self) else { return }
-        dataPoint.bTemp = Double(convertedData) // This is where we will parse the data sent
+        dataPoint.bTemp = Double(convertedData)
         dataPoint.time = Date()
-        
         database.save()
     }
     
