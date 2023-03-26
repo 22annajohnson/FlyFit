@@ -192,16 +192,16 @@ class BLEController: NSObject, ObservableObject, CBCentralManagerDelegate, CBPer
     
         
         // Specific to testing microcontroller code
-        let tempString = String(characteristicASCIIValue).split(separator: ",")[0]
-        var tempPoint = (tempString as NSString).integerValue
+        let rawData = String(characteristicASCIIValue).split(separator: ",")[0]
+        var convertedData = (rawData as NSString).integerValue
 //        var tempTime = NSDate()
-        print(tempPoint)
+        print(convertedData)
         
         
         // Save data to CoreData
         let database = DataController()
         guard let dataPoint = database.add(_type: Sensor.self) else { return }
-        dataPoint.bTemp = Double(tempPoint) // This is where we will parse the data sent
+        dataPoint.bTemp = Double(convertedData) // This is where we will parse the data sent
         dataPoint.time = Date()
         
         database.save()
