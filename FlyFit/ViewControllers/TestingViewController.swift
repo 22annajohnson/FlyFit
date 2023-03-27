@@ -118,7 +118,7 @@ extension TestingViewController: UITableViewDelegate, UITableViewDataSource {
         case "hAccelZ":
             containedData = dataPoints.hAccelZ
         default:
-            print("Failed Cell")
+            print("Failed Cell in Test")
         }
         
         cell.textLabel?.text = String(containedData)
