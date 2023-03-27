@@ -38,6 +38,7 @@
 		A1220BA229B25F79006221E5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1220BA129B25F79006221E5 /* DataController.swift */; };
 		A1220BA729B27170006221E5 /* Sensor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1220BA529B27170006221E5 /* Sensor+CoreDataClass.swift */; };
 		A1220BA829B27170006221E5 /* Sensor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1220BA629B27170006221E5 /* Sensor+CoreDataProperties.swift */; };
+		A1BDA70929D1F96D00166B48 /* SensorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BDA70829D1F96D00166B48 /* SensorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,6 +87,7 @@
 		A1220BA129B25F79006221E5 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		A1220BA529B27170006221E5 /* Sensor+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensor+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A1220BA629B27170006221E5 /* Sensor+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A1BDA70829D1F96D00166B48 /* SensorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 		5765DF9829B1291100AFFC4D /* FlyFit */ = {
 			isa = PBXGroup;
 			children = (
+				A1BDA70A29D1F9C000166B48 /* SwiftUIViews */,
 				5740A08C29BFD0400036F01E /* Models */,
 				5740A08029BA52D60036F01E /* Views */,
 				5765DFB429B2766300AFFC4D /* StyleGuide */,
@@ -200,6 +203,14 @@
 				A1220BA129B25F79006221E5 /* DataController.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		A1BDA70A29D1F9C000166B48 /* SwiftUIViews */ = {
+			isa = PBXGroup;
+			children = (
+				A1BDA70829D1F96D00166B48 /* SensorView.swift */,
+			);
+			path = SwiftUIViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +293,7 @@
 			files = (
 				5765DFB129B1299200AFFC4D /* MainTabBarViewController.swift in Sources */,
 				5740A08E29BFD04A0036F01E /* Metric.swift in Sources */,
+				A1BDA70929D1F96D00166B48 /* SensorView.swift in Sources */,
 				A1220BA729B27170006221E5 /* Sensor+CoreDataClass.swift in Sources */,
 				5765DF9E29B1291100AFFC4D /* HomeViewController.swift in Sources */,
 				5765DFA429B1291100AFFC4D /* FlyFit.xcdatamodeld in Sources */,
@@ -435,7 +447,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QTSJFA7Y7P;
+				DEVELOPMENT_TEAM = 4C7H6LPRHA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlyFit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -462,7 +474,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QTSJFA7Y7P;
+				DEVELOPMENT_TEAM = 4C7H6LPRHA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlyFit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
