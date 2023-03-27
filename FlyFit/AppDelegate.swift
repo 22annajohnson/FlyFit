@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import BackgroundTasks
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        registerBackgroundTask()
         return true
     }
 
@@ -74,6 +76,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
+        }
+    }
+    
+    //MARK: Register and Submit BackGround Tasks
+    
+    private func registerBackgroundTask() {
+        print("registering")
+        let backgroundAppRefreshTaskSchedulerIdentifier = "com.JakeLoranger.FlyFit.BackgroundRefresh"
+        let timeDelay = 1.0
+        let backgroundAppRefreshTaskRequest = BGAppRefreshTaskRequest(identifier: backgroundAppRefreshTaskSchedulerIdentifier)
+        
+        BGTaskScheduler.shared.register(forTaskWithIdentifier: backgroundAppRefreshTaskSchedulerIdentifier, using: nil) { (task) in
+            print("BackgroundAppRefreshTaskScheduler is executed NOW!")
+            task.expirationHandler = {
+                task.setTaskCompleted(success: false)
+            }
+            
+            // Do some data fetching and call setTaskCompleted(success:) asap!
+//            let isFetchingSuccess = true
+//            task.setTaskCompleted(success: isFetchingSuccess)
+        }
+        
+        do {
+            backgroundAppRefreshTaskRequest.earliestBeginDate = Date(timeIntervalSinceNow: timeDelay)
+            try BGTaskScheduler.shared.submit(backgroundAppRefreshTaskRequest)
+            print("Submitted task request")
+            
+//            Function that runs in the background
+//            BGTest().handleAppRefreshTask()
+            
+        } catch {
+            print("Failed to submit BGTask")
         }
     }
 

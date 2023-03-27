@@ -27,7 +27,7 @@ extension Sensor {
     @NSManaged public var bAccelZ: Double
     @NSManaged public var hAccelY: Double
     @NSManaged public var hAccelZ: Double
-    @NSManaged public var id: String?
+    @NSManaged public var name: String?
 
 }
 
