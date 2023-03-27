@@ -10,6 +10,10 @@
 		5740A08229BA52F50036F01E /* FastStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5740A08129BA52F50036F01E /* FastStatsView.swift */; };
 		5740A08429BA5C7D0036F01E /* FlightLogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5740A08329BA5C7D0036F01E /* FlightLogsViewController.swift */; };
 		5740A08629BA5C9D0036F01E /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5740A08529BA5C9D0036F01E /* NavigationViewController.swift */; };
+		5740A08929BA74A20036F01E /* BetterSegmentedControl in Frameworks */ = {isa = PBXBuildFile; productRef = 5740A08829BA74A20036F01E /* BetterSegmentedControl */; };
+		5740A08B29BFCF8B0036F01E /* MetricsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5740A08A29BFCF8B0036F01E /* MetricsTableViewCell.swift */; };
+		5740A08E29BFD04A0036F01E /* Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5740A08D29BFD04A0036F01E /* Metric.swift */; };
+		5740A09029BFE1590036F01E /* MetricTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5740A08F29BFE1590036F01E /* MetricTypes.swift */; };
 		5765DF9A29B1291100AFFC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DF9929B1291100AFFC4D /* AppDelegate.swift */; };
 		5765DF9C29B1291100AFFC4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DF9B29B1291100AFFC4D /* SceneDelegate.swift */; };
 		5765DF9E29B1291100AFFC4D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DF9D29B1291100AFFC4D /* HomeViewController.swift */; };
@@ -63,6 +67,9 @@
 		5740A08129BA52F50036F01E /* FastStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastStatsView.swift; sourceTree = "<group>"; };
 		5740A08329BA5C7D0036F01E /* FlightLogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightLogsViewController.swift; sourceTree = "<group>"; };
 		5740A08529BA5C9D0036F01E /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		5740A08A29BFCF8B0036F01E /* MetricsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsTableViewCell.swift; sourceTree = "<group>"; };
+		5740A08D29BFD04A0036F01E /* Metric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metric.swift; sourceTree = "<group>"; };
+		5740A08F29BFE1590036F01E /* MetricTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricTypes.swift; sourceTree = "<group>"; };
 		5765DF9629B1291100AFFC4D /* FlyFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5765DF9929B1291100AFFC4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5765DF9B29B1291100AFFC4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +108,7 @@
 				57C047F629B7C47000E1566B /* MapboxCommon.xcframework in Frameworks */,
 				57C0480329B7C4A100E1566B /* Turf.xcframework in Frameworks */,
 				57C047FD29B7C48B00E1566B /* MapboxMaps.xcframework in Frameworks */,
+				5740A08929BA74A20036F01E /* BetterSegmentedControl in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,8 +119,18 @@
 			isa = PBXGroup;
 			children = (
 				5740A08129BA52F50036F01E /* FastStatsView.swift */,
+				5740A08A29BFCF8B0036F01E /* MetricsTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5740A08C29BFD0400036F01E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5740A08D29BFD04A0036F01E /* Metric.swift */,
+				5740A08F29BFE1590036F01E /* MetricTypes.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5765DF8D29B1291000AFFC4D = {
@@ -135,6 +153,7 @@
 		5765DF9829B1291100AFFC4D /* FlyFit */ = {
 			isa = PBXGroup;
 			children = (
+
 				A14A4F1D29BBA0F2003E3F7B /* SwiftUIViews */,
 				A14A4F1629BA6E67003E3F7B /* BLE */,
 				5740A08029BA52D60036F01E /* Views */,
@@ -231,6 +250,9 @@
 			dependencies = (
 			);
 			name = FlyFit;
+			packageProductDependencies = (
+				5740A08829BA74A20036F01E /* BetterSegmentedControl */,
+			);
 			productName = FlyFit;
 			productReference = 5765DF9629B1291100AFFC4D /* FlyFit.app */;
 			productType = "com.apple.product-type.application";
@@ -260,6 +282,7 @@
 			);
 			mainGroup = 5765DF8D29B1291000AFFC4D;
 			packageReferences = (
+				5740A08729BA74A20036F01E /* XCRemoteSwiftPackageReference "BetterSegmentedControl" */,
 			);
 			productRefGroup = 5765DF9729B1291100AFFC4D /* Products */;
 			projectDirPath = "";
@@ -289,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5765DFB129B1299200AFFC4D /* MainTabBarViewController.swift in Sources */,
+				5740A08E29BFD04A0036F01E /* Metric.swift in Sources */,
 				A1220BA729B27170006221E5 /* Sensor+CoreDataClass.swift in Sources */,
 				A14A4F1829BA6E7D003E3F7B /* CBUUIDs.swift in Sources */,
 				A16B6B6529CA1DD400BF9C2C /* TestingViewController.swift in Sources */,
@@ -307,6 +331,7 @@
 				A14A4F1C29BAB536003E3F7B /* ChartView.swift in Sources */,
 				5740A08629BA5C9D0036F01E /* NavigationViewController.swift in Sources */,
 				5765DF9C29B1291100AFFC4D /* SceneDelegate.swift in Sources */,
+				5740A09029BFE1590036F01E /* MetricTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +541,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5740A08729BA74A20036F01E /* XCRemoteSwiftPackageReference "BetterSegmentedControl" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gmarm/BetterSegmentedControl";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5740A08829BA74A20036F01E /* BetterSegmentedControl */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5740A08729BA74A20036F01E /* XCRemoteSwiftPackageReference "BetterSegmentedControl" */;
+			productName = BetterSegmentedControl;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		5765DFA229B1291100AFFC4D /* FlyFit.xcdatamodeld */ = {
