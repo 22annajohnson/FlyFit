@@ -153,6 +153,7 @@
 		5765DF9829B1291100AFFC4D /* FlyFit */ = {
 			isa = PBXGroup;
 			children = (
+
 				A14A4F1D29BBA0F2003E3F7B /* SwiftUIViews */,
 				A14A4F1629BA6E67003E3F7B /* BLE */,
 				5740A08029BA52D60036F01E /* Views */,
