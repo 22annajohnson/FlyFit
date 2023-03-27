@@ -42,12 +42,14 @@ class DataController: ObservableObject {
         return sensorData
     }
     
+    
+    
 //    Parse data
     func parseData(allSensors: [Sensor], id: String) -> [Sensor] {
         var outputList: [Sensor] = []
         
         for sensor in allSensors {
-            if sensor.id == id {
+            if sensor.name == id {
                 outputList.append(sensor)
             }
         }

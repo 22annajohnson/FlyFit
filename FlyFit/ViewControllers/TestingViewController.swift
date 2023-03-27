@@ -16,22 +16,8 @@ class TestingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-//        let database = DataController()
-//        guard let dataPoint1 = database.add(_type: Sensor.self) else { return }
-//        dataPoint1.bTemp = 83.5 // This is where we will parse the data sent
-//        dataPoint1.time = Date()
-//
-//        database.save()
-//
-//        guard let dataPoint2 = database.add(_type: Sensor.self) else { return }
-//        dataPoint2.bTemp = 84.5 // This is where we will parse the data sent
-//        dataPoint2.time = Date()
-//
-//        database.save()
-        
-       addElements()
+        addElements()
 
     }
     
@@ -112,28 +98,33 @@ extension TestingViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         let dataPoints = tempData[indexPath.row]
+        var containedData: Double = -1
+        
+        switch dataPoints.name {
+        case "bTemp":
+            containedData = dataPoints.bTemp
+        case "cTemp":
+            containedData = dataPoints.cTemp
+        case "bAccelX":
+            containedData = dataPoints.bAccelX
+        case "bAccelY":
+            containedData = dataPoints.bAccelY
+        case "bAccelZ":
+            containedData = dataPoints.bAccelZ
+        case "hAccelX":
+            containedData = dataPoints.hAccelX
+        case "hAccelY":
+            containedData = dataPoints.hAccelY
+        case "hAccelZ":
+            containedData = dataPoints.hAccelZ
+        default:
+            print("Failed Cell")
+        }
+        
+        cell.textLabel?.text = String(containedData)
 
-//                dataPoints.temp = Int64(tempPoint)
-
-        let tempData = dataPoints.bTemp
-        let tempDataString = String(tempData)
-        cell.textLabel?.text = tempDataString as! String
-
-        let tempDate = dataPoints.time as! Date
         let dateFormatter = DateFormatter()
           dateFormatter.dateFormat = "MMMM d yyyy, hh:mm:ss"
-
-        let dateLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.bounds.width*0.5, height: view.bounds.height))
-        let dataLabel = UILabel(frame: CGRect(x: view.bounds.width*0.5, y: 0, width: view.bounds.width*0.5, height: view.bounds.height))
-        dateLabel.text = "\(tempDate)"
-        cell.addSubview(dataLabel)
-        cell.addSubview(dateLabel)
-//        cell.detailTextLabel?.text = dateFormatter.string(from: tempDate)
-
-//        let label = UILabel(frame: view.bounds)
-//        label.text = String(describing: indexPath)
-//
-//        cell.addSubview(label)
         
         return cell
     }

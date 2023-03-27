@@ -78,7 +78,7 @@ class BLEController: NSObject, ObservableObject, CBCentralManagerDelegate, CBPer
         print(String(describing: peripheral.identifier))
         
         // If the discovered peripheral identifier matches the inputted tx value, then the central anager connects to it.
-        if String(describing: peripheral.identifier) == tx{
+        if String(describing: peripheral.identifier) == service{
             // Calls didConnect extension
             print(true)
             targetPeripheral = peripheral
@@ -192,18 +192,22 @@ class BLEController: NSObject, ObservableObject, CBCentralManagerDelegate, CBPer
     
         
         // Specific to testing microcontroller code
-        let rawData = String(characteristicASCIIValue).split(separator: ",")[0]
-        var convertedData = (rawData as NSString).integerValue
-//        var tempTime = NSDate()
-//        print(convertedData)
+        // Microcontroller format: "bTemp: 22.9214"
+        let rawData = String(characteristicASCIIValue)
+        
         
         
         // Save data to CoreData
-        let database = DataController()
-        guard let dataPoint = database.add(_type: Sensor.self) else { return }
-        dataPoint.bTemp = Double(convertedData)
-        dataPoint.time = Date()
-        database.save()
+//        let database = DataController()
+        AddBLEData().parseBLE(rawData: rawData)
+//        let parsedData = database.parseBLE(rawData: rawData)
+//        let id = parsedData[0]
+//        let value = parsedData[1]
+//
+//        guard let dataPoint = database.add(_type: Sensor.self) else { return }
+//        dataPoint.bTemp = Double(convertedData)
+//        dataPoint.time = Date()
+//        database.save()
     }
     
 }

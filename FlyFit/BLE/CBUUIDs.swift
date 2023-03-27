@@ -10,8 +10,8 @@ import CoreBluetooth
 
 struct CBUUIDs {
     // UUID Strings
-    static let service = "825B7501-2280-E5CA-C71B-49010282FFC4"
-    static let tx = "AE16BCEC-C712-65A2-F0C6-3EDD867FB437"
+    static let service = "C9BBF76C-ACFA-36A9-E4BD-567D73F10AFD"
+    static let tx = "825B7502-2280-E5CA-C71B-49010282FFC4"
     static let rx = "825B7503-2280-E5CA-C71B-49010282FFC4"
 
     // Converted UUID strings to CBUUID

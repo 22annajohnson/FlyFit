@@ -21,7 +21,7 @@
 		5765DFB829B27C1200AFFC4D /* Inter-VariableFont_slnt,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5765DFB729B27C1200AFFC4D /* Inter-VariableFont_slnt,wght.ttf */; };
 		5765DFBA29B284B600AFFC4D /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DFB929B284B600AFFC4D /* Elements.swift */; };
 		5765DFBC29B2910800AFFC4D /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DFBB29B2910800AFFC4D /* StatusViewController.swift */; };
-		576D216B29CFD56A006A4EF5 /* BLEParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D216A29CFD56A006A4EF5 /* BLEParser.swift */; };
+		576D216D29D1FCA1006A4EF5 /* AddBLEData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D216C29D1FCA1006A4EF5 /* AddBLEData.swift */; };
 		57C047F629B7C47000E1566B /* MapboxCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047F529B7C47000E1566B /* MapboxCommon.xcframework */; };
 		57C047F729B7C47000E1566B /* MapboxCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047F529B7C47000E1566B /* MapboxCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57C047FA29B7C48200E1566B /* MapboxCoreMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047F929B7C48200E1566B /* MapboxCoreMaps.xcframework */; };
@@ -76,7 +76,7 @@
 		5765DFB729B27C1200AFFC4D /* Inter-VariableFont_slnt,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-VariableFont_slnt,wght.ttf"; sourceTree = "<group>"; };
 		5765DFB929B284B600AFFC4D /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
 		5765DFBB29B2910800AFFC4D /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
-		576D216A29CFD56A006A4EF5 /* BLEParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEParser.swift; sourceTree = "<group>"; };
+		576D216C29D1FCA1006A4EF5 /* AddBLEData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBLEData.swift; sourceTree = "<group>"; };
 		57C047F529B7C47000E1566B /* MapboxCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MapboxCommon.xcframework; path = artifacts/MapboxCommon.xcframework; sourceTree = "<group>"; };
 		57C047F929B7C48200E1566B /* MapboxCoreMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MapboxCoreMaps.xcframework; path = artifacts/MapboxCoreMaps.xcframework; sourceTree = "<group>"; };
 		57C047FC29B7C48B00E1566B /* MapboxMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MapboxMaps.xcframework; path = artifacts/MapboxMaps.xcframework; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 			children = (
 				A14A4F1729BA6E7D003E3F7B /* CBUUIDs.swift */,
 				A14A4F1929BA6F6C003E3F7B /* BLEController.swift */,
-				576D216A29CFD56A006A4EF5 /* BLEParser.swift */,
+				576D216C29D1FCA1006A4EF5 /* AddBLEData.swift */,
 			);
 			path = BLE;
 			sourceTree = "<group>";
@@ -298,10 +298,10 @@
 				5765DFBA29B284B600AFFC4D /* Elements.swift in Sources */,
 				5765DF9A29B1291100AFFC4D /* AppDelegate.swift in Sources */,
 				A1220BA229B25F79006221E5 /* DataController.swift in Sources */,
-				576D216B29CFD56A006A4EF5 /* BLEParser.swift in Sources */,
 				5740A08229BA52F50036F01E /* FastStatsView.swift in Sources */,
 				A1220BA829B27170006221E5 /* Sensor+CoreDataProperties.swift in Sources */,
 				5765DFB629B2769F00AFFC4D /* Style.swift in Sources */,
+				576D216D29D1FCA1006A4EF5 /* AddBLEData.swift in Sources */,
 				5765DFBC29B2910800AFFC4D /* StatusViewController.swift in Sources */,
 				5740A08429BA5C7D0036F01E /* FlightLogsViewController.swift in Sources */,
 				A14A4F1C29BAB536003E3F7B /* ChartView.swift in Sources */,
@@ -445,7 +445,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4C7H6LPRHA;
+				DEVELOPMENT_TEAM = QTSJFA7Y7P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlyFit/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses bluetooth to connect and read the sensor system";
@@ -473,7 +473,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4C7H6LPRHA;
+				DEVELOPMENT_TEAM = QTSJFA7Y7P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlyFit/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses bluetooth to connect and read the sensor system";
