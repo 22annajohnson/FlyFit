@@ -27,6 +27,7 @@ class FastStatsView: UIView {
         button.layer.cornerRadius = 15
         button.setTitle("Start Flight", for: .normal)
         button.titleLabel?.font = Style().buttonFont
+        button.addTarget(self, action: #selector(HomeViewController.startFlight), for: .touchUpInside)
         
         view.addSubview(button)
         
