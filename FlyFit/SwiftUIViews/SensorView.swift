@@ -11,19 +11,22 @@ import Charts
 
 struct SensorView: View {
     var dataControl = DataController()
-    var data = [Sensor]()
+    var result: [CoorType]
+    var name: String?
+
     
-    init() {
-        data = dataControl.fetchData()
+    init(name: String) {
+        result = dataControl.parseData(id: name)
+        self.name = name
     }
     
     var body: some View {
-        GroupBox ("Sensor Name") {
+        GroupBox (name!) {
             Chart {
-                ForEach(data) { item in
+                ForEach(result, id: \.y) { item in
                     LineMark(
-                        x: .value("Time", item.time!),
-                        y: .value("Temp", item.bTemp)
+                        x: .value("Time", item.x),
+                        y: .value("Temp", item.y)
                     )
                     .interpolationMethod(.catmullRom)
                 }
@@ -40,6 +43,6 @@ struct SensorView: View {
 
 struct SensorView_Previews: PreviewProvider {
     static var previews: some View {
-        SensorView()
+        SensorView(name: "")
     }
 }

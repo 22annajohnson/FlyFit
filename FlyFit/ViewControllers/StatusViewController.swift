@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 import BetterSegmentedControl
 
 class StatusViewController: UIViewController {
@@ -99,8 +100,8 @@ extension StatusViewController: UITableViewDelegate, UITableViewDataSource {
         //        To Do: Change SwiftUI controller based on table cell section index
         let metric = metrics[indexPath.section]
 
-//        let swiftUIController = UIHostingController(rootView: SensorView(title: health.title, indicator: health.indicator))
-//        navigationController?.pushViewController(swiftUIController, animated: true)
+        let swiftUIController = UIHostingController(rootView: SensorView(name: metric.sensorType.title))
+        navigationController?.pushViewController(swiftUIController, animated: true)
         
     }
 }

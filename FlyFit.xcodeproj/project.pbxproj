@@ -26,15 +26,15 @@
 		5765DFBA29B284B600AFFC4D /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DFB929B284B600AFFC4D /* Elements.swift */; };
 		5765DFBC29B2910800AFFC4D /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765DFBB29B2910800AFFC4D /* StatusViewController.swift */; };
 		57C047F629B7C47000E1566B /* MapboxCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047F529B7C47000E1566B /* MapboxCommon.xcframework */; };
-		57C047F729B7C47000E1566B /* MapboxCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047F529B7C47000E1566B /* MapboxCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57C047FA29B7C48200E1566B /* MapboxCoreMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047F929B7C48200E1566B /* MapboxCoreMaps.xcframework */; };
-		57C047FB29B7C48200E1566B /* MapboxCoreMaps.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047F929B7C48200E1566B /* MapboxCoreMaps.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57C047FD29B7C48B00E1566B /* MapboxMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047FC29B7C48B00E1566B /* MapboxMaps.xcframework */; };
-		57C047FE29B7C48B00E1566B /* MapboxMaps.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047FC29B7C48B00E1566B /* MapboxMaps.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57C0480029B7C49800E1566B /* MapboxMobileEvents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047FF29B7C49800E1566B /* MapboxMobileEvents.xcframework */; };
-		57C0480129B7C49800E1566B /* MapboxMobileEvents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047FF29B7C49800E1566B /* MapboxMobileEvents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57C0480329B7C4A100E1566B /* Turf.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C0480229B7C4A100E1566B /* Turf.xcframework */; };
-		57C0480429B7C4A100E1566B /* Turf.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C0480229B7C4A100E1566B /* Turf.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57DEEF1E29D2552F0084D208 /* Turf.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C0480229B7C4A100E1566B /* Turf.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57DEEF1F29D2552F0084D208 /* MapboxMobileEvents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047FF29B7C49800E1566B /* MapboxMobileEvents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57DEEF2029D2552F0084D208 /* MapboxMaps.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047FC29B7C48B00E1566B /* MapboxMaps.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57DEEF2129D2552F0084D208 /* MapboxCoreMaps.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047F929B7C48200E1566B /* MapboxCoreMaps.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57DEEF2229D2552F0084D208 /* MapboxCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047F529B7C47000E1566B /* MapboxCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A1220BA229B25F79006221E5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1220BA129B25F79006221E5 /* DataController.swift */; };
 		A1220BA729B27170006221E5 /* Sensor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1220BA529B27170006221E5 /* Sensor+CoreDataClass.swift */; };
 		A1220BA829B27170006221E5 /* Sensor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1220BA629B27170006221E5 /* Sensor+CoreDataProperties.swift */; };
@@ -48,11 +48,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				57C047FB29B7C48200E1566B /* MapboxCoreMaps.xcframework in Embed Frameworks */,
-				57C0480129B7C49800E1566B /* MapboxMobileEvents.xcframework in Embed Frameworks */,
-				57C047F729B7C47000E1566B /* MapboxCommon.xcframework in Embed Frameworks */,
-				57C0480429B7C4A100E1566B /* Turf.xcframework in Embed Frameworks */,
-				57C047FE29B7C48B00E1566B /* MapboxMaps.xcframework in Embed Frameworks */,
+				57DEEF1E29D2552F0084D208 /* Turf.xcframework in Embed Frameworks */,
+				57DEEF1F29D2552F0084D208 /* MapboxMobileEvents.xcframework in Embed Frameworks */,
+				57DEEF2029D2552F0084D208 /* MapboxMaps.xcframework in Embed Frameworks */,
+				57DEEF2129D2552F0084D208 /* MapboxCoreMaps.xcframework in Embed Frameworks */,
+				57DEEF2229D2552F0084D208 /* MapboxCommon.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,7 +447,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4C7H6LPRHA;
+				DEVELOPMENT_TEAM = QTSJFA7Y7P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlyFit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -474,7 +474,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4C7H6LPRHA;
+				DEVELOPMENT_TEAM = QTSJFA7Y7P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlyFit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
