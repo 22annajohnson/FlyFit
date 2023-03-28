@@ -11,6 +11,11 @@ import UIKit
 import SwiftUI
 
 
+struct CoorType {
+    var x: Double
+    var y: Date
+}
+
 class DataController: ObservableObject {
     var sensorData = [Sensor]()
     
@@ -42,18 +47,44 @@ class DataController: ObservableObject {
         return sensorData
     }
     
-    
-    
+
 //    Parse data
-    func parseData(allSensors: [Sensor], id: String) -> [Sensor] {
+    func parseData(id: String) -> [CoorType] {
         var outputList: [Sensor] = []
-        
+        var allSensors = fetchData()
         for sensor in allSensors {
             if sensor.name == id {
                 outputList.append(sensor)
             }
         }
         
-        return outputList
+        var parsedList: [CoorType] = []
+        for sensor in outputList {
+            var coordinate = CoorType(x: 0, y: Date())
+            switch sensor.name {
+            case "bTemp":
+                coordinate.x = sensor.bTemp
+            case "cTemp":
+                coordinate.x = sensor.cTemp
+            case "bAccelX":
+                coordinate.x = sensor.bAccelX
+            case "bAccelY":
+                coordinate.x = sensor.bAccelY
+            case "bAccelZ":
+                coordinate.x = sensor.bAccelZ
+            case "hAccelX":
+                coordinate.x = sensor.hAccelX
+            case "hAccelY":
+                coordinate.x = sensor.hAccelY
+            case "hAccelZ":
+                coordinate.x = sensor.hAccelZ
+            default:
+                print("parse data switch failed")
+            }
+            coordinate.y = sensor.time!
+            parsedList.append(coordinate)
+        }
+        
+        return parsedList
     }
 }
