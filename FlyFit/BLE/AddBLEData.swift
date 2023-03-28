@@ -24,12 +24,15 @@ class AddBLEData: ObservableObject {
         guard let dataPoint = database.add(_type: Sensor.self) else { return }
         dataPoint.time = Date()
         dataPoint.name = String(id)
-        print(id)
         switch id {
         case "bTemp":
             dataPoint.bTemp = value!
         case "cTemp":
             dataPoint.cTemp = value!
+            
+        //TODO: This can be changed if we normalize accelerometer data in micropython
+//            Alternatively, we can send all data over, and have two views showing separated Accel, and normalized motion for demo purposes.
+        
         case "bAccelX":
             dataPoint.bAccelX = value!
         case "bAccelY":

@@ -16,8 +16,10 @@ struct SensorView: View {
 
     
     init(name: String) {
-        result = dataControl.parseData(id: name)
         self.name = name
+        result = dataControl.parseData(id: self.name!)
+        print(self.name)
+        print(result)
     }
     
     var body: some View {

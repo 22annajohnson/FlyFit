@@ -12,8 +12,15 @@ import SwiftUI
 
 
 struct CoorType {
+    var x: Date
+    var y: Double
+}
+
+struct AccelerometerData {
+    var time: Date
     var x: Double
-    var y: Date
+    var y: Double
+    var z: Double
 }
 
 class DataController: ObservableObject {
@@ -50,41 +57,69 @@ class DataController: ObservableObject {
 
 //    Parse data
     func parseData(id: String) -> [CoorType] {
+        print("parse")
+        var coreDataID: String = ""
+        switch id {
+        case "Body Temperature":
+            coreDataID = "bTemp"
+        case "Cabin Temperature":
+            coreDataID = "cTemp"
+//        case "Motion":
+//            parseAccelerometer(name: id)
+        default:
+            print("parse data id failed")
+        }
         var outputList: [Sensor] = []
-        var allSensors = fetchData()
+        let allSensors = fetchData()
         for sensor in allSensors {
-            if sensor.name == id {
+            if sensor.name == coreDataID {
                 outputList.append(sensor)
             }
         }
         
         var parsedList: [CoorType] = []
         for sensor in outputList {
-            var coordinate = CoorType(x: 0, y: Date())
+            var coordinate = CoorType(x: Date(), y: 0)
+            print(sensor.name)
             switch sensor.name {
             case "bTemp":
-                coordinate.x = sensor.bTemp
+                coordinate.y = sensor.bTemp
             case "cTemp":
-                coordinate.x = sensor.cTemp
-            case "bAccelX":
-                coordinate.x = sensor.bAccelX
-            case "bAccelY":
-                coordinate.x = sensor.bAccelY
-            case "bAccelZ":
-                coordinate.x = sensor.bAccelZ
-            case "hAccelX":
-                coordinate.x = sensor.hAccelX
-            case "hAccelY":
-                coordinate.x = sensor.hAccelY
-            case "hAccelZ":
-                coordinate.x = sensor.hAccelZ
+                coordinate.y = sensor.cTemp
             default:
                 print("parse data switch failed")
             }
-            coordinate.y = sensor.time!
+            coordinate.x = sensor.time!
             parsedList.append(coordinate)
         }
         
         return parsedList
     }
+    
+//    func parseAccelerometer(name: String) -> [AccelerometerData] {
+//        var times = []
+//        var xList = []
+//        var yList = []
+//        var zList = []
+//        var xID = ""
+//        var yID = ""
+//        var zID = ""
+//
+//        switch name {
+//        case "Motion":
+//            xID = "bAccelX"
+//            yID = "bAccelY"
+//            zID = "bAccelZ"
+//        }
+//
+//        let allSensors = fetchData()
+//
+//        for sensor in allSensors {
+//            if sensor.name == coreDataID {
+//                outputList.append(sensor)
+//            }
+//        }
+//
+//        return
+//    }
 }
