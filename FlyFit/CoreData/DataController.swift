@@ -17,21 +17,10 @@ struct CoorType {
 }
 
 class DataController: ObservableObject {
-    
-    let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    let container = NSPersistentContainer(name: "FlyFit")
     var sensorData = [Sensor]()
     
-//    Initializes container
-    init() {
-        container.loadPersistentStores { description, error in
-            if let error = error {
-                print("CoreData failed to load: \(error.localizedDescription)")
-            }
-        }
-    }
+    let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-//    Creates an object to add data points
     func add<T: NSManagedObject>(_type: T.Type) -> T? {
         guard let entityName = T.entity().name else { return nil}
         guard let entity = NSEntityDescription.entity(forEntityName: entityName , in: viewContext) else { return nil }
@@ -39,15 +28,14 @@ class DataController: ObservableObject {
         return object
     }
     
-//    Saves data to CoreData
     func save() {
         do {
             try viewContext.save()
         } catch {
             print(error.localizedDescription)
         }
-    }
         
+    }
     
 //    Fetches data
     func fetchData() -> [Sensor] {
@@ -59,7 +47,7 @@ class DataController: ObservableObject {
         return sensorData
     }
     
-    
+
 //    Parse data
     func parseData(id: String) -> [CoorType] {
         var outputList: [Sensor] = []
