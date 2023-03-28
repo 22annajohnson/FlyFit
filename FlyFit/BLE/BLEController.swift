@@ -190,7 +190,7 @@ class BLEController: NSObject, ObservableObject, CBCentralManagerDelegate, CBPer
         let ASCIIstring = NSString(data: characteristicValue, encoding: String.Encoding.utf8.rawValue) else { return }
         characteristicASCIIValue = ASCIIstring
     
-        
+    
         // Specific to testing microcontroller code
         // Microcontroller format: "bTemp: 22.9214"
         let rawData = String(characteristicASCIIValue)

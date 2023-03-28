@@ -20,3 +20,4 @@ struct CBUUIDs {
     static let BLE_Characteristic_uuid_Rx = CBUUID(string: rx)//(Property = Read/Notify)
 
 }
+

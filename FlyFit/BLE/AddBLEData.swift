@@ -49,3 +49,4 @@ class AddBLEData: ObservableObject {
         database.save()
     }
 }
+
