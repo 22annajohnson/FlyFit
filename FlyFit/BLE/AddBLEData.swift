@@ -17,7 +17,6 @@ class AddBLEData: ObservableObject {
     func parseBLE(rawData: String) {
         
         let database = DataController()
-        
         let id = rawData.split(separator: ":")[0]
         let value = Double(rawData.split(separator: ":")[1].trimmingCharacters(in: .whitespacesAndNewlines))
         
@@ -29,10 +28,6 @@ class AddBLEData: ObservableObject {
             dataPoint.bTemp = value!
         case "cTemp":
             dataPoint.cTemp = value!
-            
-        //TODO: This can be changed if we normalize accelerometer data in micropython
-//            Alternatively, we can send all data over, and have two views showing separated Accel, and normalized motion for demo purposes.
-        
         case "bAccelX":
             dataPoint.bAccelX = value!
         case "bAccelY":

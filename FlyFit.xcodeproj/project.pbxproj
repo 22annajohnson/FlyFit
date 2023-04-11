@@ -30,6 +30,7 @@
 		577D995529D280AD00493358 /* MapboxMobileEvents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 577D995029D280AD00493358 /* MapboxMobileEvents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		577D995629D280AD00493358 /* MapboxCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 577D995129D280AD00493358 /* MapboxCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		577D995729D280AD00493358 /* Turf.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 577D995229D280AD00493358 /* Turf.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		577D995929D34A2400493358 /* AccelerometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D995829D34A2400493358 /* AccelerometerView.swift */; };
 		57C047F629B7C47000E1566B /* MapboxCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047F529B7C47000E1566B /* MapboxCommon.xcframework */; };
 		57C047FA29B7C48200E1566B /* MapboxCoreMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047F929B7C48200E1566B /* MapboxCoreMaps.xcframework */; };
 		57C047FD29B7C48B00E1566B /* MapboxMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C047FC29B7C48B00E1566B /* MapboxMaps.xcframework */; };
@@ -88,6 +89,7 @@
 		577D995029D280AD00493358 /* MapboxMobileEvents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MapboxMobileEvents.xcframework; path = artifacts/MapboxMobileEvents.xcframework; sourceTree = "<group>"; };
 		577D995129D280AD00493358 /* MapboxCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MapboxCommon.xcframework; path = artifacts/MapboxCommon.xcframework; sourceTree = "<group>"; };
 		577D995229D280AD00493358 /* Turf.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Turf.xcframework; path = artifacts/Turf.xcframework; sourceTree = "<group>"; };
+		577D995829D34A2400493358 /* AccelerometerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerView.swift; sourceTree = "<group>"; };
 		57C047F529B7C47000E1566B /* MapboxCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MapboxCommon.xcframework; path = artifacts/MapboxCommon.xcframework; sourceTree = "<group>"; };
 		57C047F929B7C48200E1566B /* MapboxCoreMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MapboxCoreMaps.xcframework; path = artifacts/MapboxCoreMaps.xcframework; sourceTree = "<group>"; };
 		57C047FC29B7C48B00E1566B /* MapboxMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MapboxMaps.xcframework; path = artifacts/MapboxMaps.xcframework; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				A1BDA70829D1F96D00166B48 /* SensorView.swift */,
+				577D995829D34A2400493358 /* AccelerometerView.swift */,
 			);
 			path = SwiftUIViews;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57DEEF2A29D277C40084D208 /* BLEController.swift in Sources */,
+				577D995929D34A2400493358 /* AccelerometerView.swift in Sources */,
 				5765DFB129B1299200AFFC4D /* MainTabBarViewController.swift in Sources */,
 				5740A08E29BFD04A0036F01E /* Metric.swift in Sources */,
 				A1BDA70929D1F96D00166B48 /* SensorView.swift in Sources */,

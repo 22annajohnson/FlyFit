@@ -99,9 +99,24 @@ extension StatusViewController: UITableViewDelegate, UITableViewDataSource {
         //        Connecting UIKit table cells to SwiftUI controller (HeartRateView)
         //        To Do: Change SwiftUI controller based on table cell section index
         let metric = metrics[indexPath.section]
+        print(metric.sensorType.title)
+        
+        
+        switch metric.sensorType.title {
+        case "Body Movement":
+            print("here")
+            let accelView = UIHostingController(rootView: AccelerometerView(name: metric.sensorType.title))
+            navigationController?.pushViewController(accelView, animated: true)
+        case "Head Movement":
+            print("here")
+            let accelView = UIHostingController(rootView: AccelerometerView(name: metric.sensorType.title))
+            navigationController?.pushViewController(accelView, animated: true)
+        
+        default:
+            var swiftUIController = UIHostingController(rootView: SensorView(name: metric.sensorType.title))
+            navigationController?.pushViewController(swiftUIController, animated: true)
 
-        let swiftUIController = UIHostingController(rootView: SensorView(name: metric.sensorType.title))
-        navigationController?.pushViewController(swiftUIController, animated: true)
+        }
         
     }
 }
@@ -111,12 +126,15 @@ extension StatusViewController {
     func fetchData(group: String) -> [Metric] {
         if group == "vital" {
             let metric1 = Metric(sensorType: MetricTypes.BodyTemp, indicator: "urgent")
-            let metric2 = Metric(sensorType: MetricTypes.BreathingRate, indicator: "warning")
-            let metric3 = Metric(sensorType: MetricTypes.HeartRate, indicator: "healthy")
-            return [metric1, metric2, metric3]
+//            let metric2 = Metric(sensorType: MetricTypes.BreathingRate, indicator: "healthy")
+            let metric2 = Metric(sensorType: MetricTypes.BodyMovement, indicator: "healthy")
+
+//            let metric3 = Metric(sensorType: MetricTypes.HeartRate, indicator: "healthy")
+            let metric4 = Metric(sensorType: MetricTypes.HeadMovement, indicator: "warning")
+            return [metric1, metric4, metric2]
         }
         else if group == "environmental" {
-            let metric1 = Metric(sensorType: MetricTypes.CabinTemperature, indicator: "healthy")
+            let metric1 = Metric(sensorType: MetricTypes.CabinTemperature, indicator: "urgent")
             let metric2 = Metric(sensorType: MetricTypes.CarbonMonoxide, indicator: "warning")
             let metric3 = Metric(sensorType: MetricTypes.Smoke, indicator: "healthy")
             return [metric1, metric2, metric3]

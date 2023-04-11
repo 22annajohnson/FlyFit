@@ -18,6 +18,11 @@ struct MetricTypes {
     
     static let BreathingRate = MetricStyle(image: UIImage(systemName: "lungs")!, title: "Breathing Rate", size: CGSize(width: UIScreen.main.bounds.width*0.14, height: UIScreen.main.bounds.width*0.14))
     
+    static let HeadMovement = MetricStyle(image: UIImage(systemName: "face.smiling.fill")!, title: "Head Movement", size: CGSize(width: UIScreen.main.bounds.width*0.14, height: UIScreen.main.bounds.width*0.14))
+    
+    static let BodyMovement = MetricStyle(image: UIImage(systemName: "person")!, title: "Body Movement", size: CGSize(width: UIScreen.main.bounds.width*0.14, height: UIScreen.main.bounds.width*0.14))
+    
+    
     //MARK: Environmental
 
     static let CabinTemperature = MetricStyle(image: UIImage(systemName: "medical.thermometer")!, title: "Cabin Temperature", size: CGSize(width: UIScreen.main.bounds.width*0.14, height: UIScreen.main.bounds.width*0.14))

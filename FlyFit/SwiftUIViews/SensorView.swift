@@ -7,19 +7,21 @@
 import SwiftUI
 import CoreData
 import Charts
+import UIKit
 
 struct SensorView: View {
     var dataControl = DataController()
-    @State var allData: ([CoorType], Double, Double, Date, Date) = ([], 50, 0, Date(), Date())
+    @State var allData: ([CoorType], Double, Double, Date, Date) = ([], 50, 0, Calendar.current.date(byAdding: .hour, value: 1, to: Date())!, Date()
+)
     var name: String?
     let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
 
 
     init(name: String) {
         self.name = name
-        allData = dataControl.parseData(id: self.name!)
-        print(allData.2*0.9)
-        print(allData.1*1.1)
+        self.allData = dataControl.parseData(id: self.name!)
+        print("Sensor")
+
     }
 
     var body: some View {
@@ -34,19 +36,31 @@ struct SensorView: View {
                 }
 
             }
+//            .animation(.easeIn(duration: 0.8))
             .chartYScale(domain: (allData.2*0.9)...(allData.1*1.1))
-            .chartXScale(domain: (allData.4) ... (allData.3))
+            .chartXScale(domain: (allData.4)...(allData.3))
             .chartYAxis{
                 AxisMarks(preset: .automatic, position: .automatic)
             }
             .chartXAxis{
                 AxisMarks(preset: .automatic, position: .automatic)
+                
             }
             .onReceive(timer) { _ in
                 allData = dataControl.parseData(id: self.name!)
             }
+            .chartXAxisLabel(position: .bottom, alignment: .center) {
+                Text("Time")
+            }
+            .chartYAxisLabel(position: .trailing, alignment: .center) {
+                Text("Celsius")
+            }
+            
         }
+        .frame(width: UIScreen.main.bounds.width, height: 400)
+        
     }
+    
 }
 
 struct SensorView_Previews: PreviewProvider {

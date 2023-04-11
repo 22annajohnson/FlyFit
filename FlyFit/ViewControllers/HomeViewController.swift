@@ -39,6 +39,13 @@ class HomeViewController: UIViewController {
         BLE.statusLabel = statusLabel
         BLE.service = CBUUIDs.service
         BLE.setup()
+        
+        view.addSubview(FastStatsView().stopFlightView(frame: CGRect(x: 0, y: view.bounds.height*0.777, width: view.bounds.width, height: view.bounds.height*0.14)))
+    }
+    
+    @objc func stopFlight() {
+        view.addSubview(FastStatsView().startFlightView(frame: CGRect(x: 0, y: view.bounds.height*0.777, width: view.bounds.width, height: view.bounds.height*0.14)))
+        
     }
 }
 
