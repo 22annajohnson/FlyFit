@@ -11,10 +11,10 @@ import UIKit
 
 struct SensorView: View {
     var dataControl = DataController()
-    @State var allData: ([CoorType], Double, Double, Date, Date) = ([], 50, 0, Calendar.current.date(byAdding: .hour, value: 1, to: Date())!, Date()
+    @State var allData: ([CoorType], Double, Double, Date, Date, Double) = ([], 50, 0, Calendar.current.date(byAdding: .hour, value: 1, to: Date())!, Date(), 0
 )
     var name: String?
-    let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
 
     init(name: String) {
@@ -57,9 +57,68 @@ struct SensorView: View {
             }
             
         }
-        .frame(width: UIScreen.main.bounds.width, height: 400)
+        .frame(width: UIScreen.main.bounds.width*0.95, height: 350)
         
+        
+        GroupBox("Statistics") {
+            VStack{
+                HStack{
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color(Style().secondaryBackgroundColor))
+                        .overlay(
+                            Text("Moving Average:")
+                                .position(CGPoint(x: 75, y: 20))
+                        )
+                        .overlay(
+                            Text(String(allData.5))
+                                .position(CGPoint(x: 75, y: 50))
+                            
+                        )
+                        
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color(Style().secondaryBackgroundColor))
+                        .overlay(
+                            Text("Max:")
+                                .position(CGPoint(x: 75, y: 20))
+                        )
+                        .overlay(
+                            Text(String(allData.1))
+                                .position(CGPoint(x: 75, y: 50))
+                            
+                        )
+                }
+                HStack{
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color(Style().secondaryBackgroundColor))
+                        .overlay(
+                            Text("Healthy Range:")
+                                .position(CGPoint(x: 75, y: 20))
+                                
+                        )
+                        .overlay(
+                            Text("36.1 - 37.2 ℃")
+                            
+                        )
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color(Style().secondaryBackgroundColor))
+                        .overlay(
+                            Text("Min:")
+                                .position(CGPoint(x: 75, y: 20))
+                        )
+                        .overlay(
+                            Text(String(allData.2))
+                                .position(CGPoint(x: 75, y: 50))
+                            
+                        )
+                }
+            }
+            
+            
+            
+        }
+        .frame(width: UIScreen.main.bounds.width*0.95, height: 250)
     }
+    
     
 }
 

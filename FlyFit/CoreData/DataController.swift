@@ -57,7 +57,7 @@ class DataController: ObservableObject {
 
 //    Parse data
 //    TODO: After NEBEC, make the y axis only scale for last 20 data points rather than all data
-    func parseData(id: String) -> (output: [CoorType], maxValue: Double, minValue: Double, maxTime: Date, minTime: Date) {
+    func parseData(id: String) -> (output: [CoorType], maxValue: Double, minValue: Double, maxTime: Date, minTime: Date, movingAverage: Double) {
 //        print("parse")
         var coreDataID: String = ""
         switch id {
@@ -88,6 +88,7 @@ class DataController: ObservableObject {
         
         var greatestValue: Double = 22
         var leastValue: Double = 21
+        var movingAverage: Double = 0
         
 
         for sensor in outputList {
@@ -125,8 +126,18 @@ class DataController: ObservableObject {
             lowerBoundX = time[time.count-21]
         }
 
-        
-        return (parsedList, greatestValue, leastValue, upperBoundX, lowerBoundX)
+        let lastDataPoints = parsedList.suffix(20)
+        var sum: Double = 0
+
+
+        for dataPoint in lastDataPoints {
+            sum += dataPoint.y
+        }
+
+        movingAverage = sum/20
+
+        //        Value = Y Data, Change later
+        return (parsedList, round(greatestValue), round(leastValue), upperBoundX, lowerBoundX, round(movingAverage))
     }
     
     func parseAccelerometer(name: String) -> (output: [AccelerometerData], maxValue: Double, minValue: Double, maxTime: Date, minTime: Date) {
